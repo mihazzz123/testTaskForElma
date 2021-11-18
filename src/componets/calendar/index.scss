@@ -1,0 +1,46 @@
+.calendar {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  margin-top: 90px;
+
+  & .calendarTop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 90px;
+    width: 70%;
+    z-index: 80;
+    background: #fff;
+  }
+}
+
+@media (max-width: 1200px) {
+  .calendar {
+    width: 75%;
+
+    & .calendarTop {
+      width: 75%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .calendar {
+    width: 100%;
+
+    & .calendarTop {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 687px) {
+  .calendar {
+    margin-top: 68px;
+
+    & .calendarTop {
+      height: 68px;
+    }
+  }
+}

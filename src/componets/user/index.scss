@@ -1,0 +1,90 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 120px;
+  border-bottom: 1px solid $color-fo;
+  border-top: 1px solid $color-fo;
+
+  &.selectUser {
+    border-bottom: 3px solid $color-fif;
+    border-top: 3px solid $color-fif;
+  }
+}
+
+.userName {
+  width: 100px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $color-fs;
+  color: $color-light;
+}
+
+.userDay {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 200px) / 7);
+  //border-right: 1px solid $color-fo;
+  //border-left: 1px solid $color-fo;
+  &:last-child {
+    margin-right: 100px;
+  }
+
+  & .dragoverItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: auto;
+    width: 100%;
+    min-height: 38px;
+    line-height: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px 5px;
+    word-wrap: anywhere;
+    color: $color-light;
+    background: fade-out($color-fs, 0.4);
+  }
+}
+
+@media (max-width: 1200px) {
+  .userName {
+    width: 90px;
+  }
+  .userDay {
+    width: calc((100% - 90px) / 7);
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+@media (max-width: 687px) {
+  .user {
+    min-height: 100px;
+  }
+  .userName {
+    width: 70px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .userDay {
+    width: calc((100% - 70px) / 7);
+
+  }
+  .userTaskTooltip {
+    width: 130px;
+    padding: 0.6rem;
+  }
+  .userTaskTooltip__title {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+  .userTaskTooltip__param {
+    flex-direction: column;
+  }
+}

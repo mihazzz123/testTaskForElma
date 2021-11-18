@@ -1,0 +1,18 @@
+<div class="search"
+     id="search">
+	<form action=""
+	      id="searchForm"
+	      class="searchForm"
+	      onsubmit="event.preventDefault()">
+		<label>
+			<input onfocus="event.target.form.classList.add('focus')"
+			       onblur="event.target.form.classList.remove('focus')"
+			       id="searchInput"
+			       type="text">
+		</label>
+		<span class="clear"
+		      onclick="event.target.closest('form').querySelector('input').value = ''"></span>
+		<button class="searchBtn"
+		        onclick="event.target.closest('form').querySelector('input').focus()"></button>
+	</form>
+</div>

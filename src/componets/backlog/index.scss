@@ -1,0 +1,28 @@
+.backlog {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding-top: 1rem;
+  background: $color-fo;
+  max-height: 100vh;
+  min-height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  &-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .backlog {
+    width: 25%;
+  }
+}
+
+@media (max-width: 992px) {
+  .backlog {
+    display: none;
+  }
+}

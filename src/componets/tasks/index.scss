@@ -1,0 +1,153 @@
+.userTask {
+  width: 100%;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: auto;
+  //border-radius: 5px;
+  border: 1px solid $color-light;
+  cursor: pointer;
+  transition: 0.25s;
+  position: relative;
+
+  &.active {
+    background-color: $color-fs;
+
+    & .userTaskName {
+      color: $color-light;
+    }
+  }
+
+  &.hover {
+    z-index: 99;
+
+    &.active {
+      border-color: saturate($color-fs, 20%);
+      background-color: saturate($color-fs, 20%);
+    }
+  }
+
+  &:hover {
+    z-index: 120;
+  }
+
+}
+
+.userTaskName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  text-align: center;
+  font-size: 0.8rem;
+  color: $color-dark;
+  padding: 10px 5px;
+  word-wrap: anywhere;
+}
+
+.userTaskName:hover + .userTaskTooltip, .userTaskTooltip:hover {
+  z-index: 110;
+  opacity: 1;
+  visibility: visible;
+  cursor: default;
+}
+
+.userTaskTooltip {
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%);
+  width: 250px;
+  padding: 16px;
+  background-color: lighten($color-dark, 80%);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px lighten($color-dark, 20%);
+  z-index: -110;
+  opacity: 0;
+  transition: 0.25s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    border: 5px solid transparent;
+    border-bottom-color: lighten($color-dark, 80%);
+  }
+}
+
+.userTaskTooltip__title {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.userTaskTooltip__param {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 1rem * 0.9;
+  font-weight: bold;
+
+  & span {
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+}
+
+.user:nth-last-child(1), .user:nth-last-child(2) {
+  & .userTaskTooltip {
+    top: auto;
+    bottom: 80%;
+
+    &::before {
+      bottom: auto;
+      top: 100%;
+      border-bottom-color: transparent;
+      border-top-color: lighten($color-dark, 80%);
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .user .userDay:last-child {
+    & .userTaskTooltip {
+      left: auto;
+      right: 0%;
+      top: 80%;
+      transform: translateX(0%);
+
+      &::before {
+        left: auto;
+        right: 10%;
+      }
+    }
+  }
+  .user .userDay:nth-last-child(2) {
+    & .userTaskTooltip {
+      left: 40%;
+
+      &::before {
+        left: calc(55% - 5px);
+      }
+    }
+  }
+}
+
+@media (max-width: 687px) {
+  .userTask {
+    min-height: 28px;
+  }
+  .userTaskName {
+    padding: 5px;
+  }
+}

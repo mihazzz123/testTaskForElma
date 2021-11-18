@@ -1,0 +1,16 @@
+$color-fs: #5cb85c;
+$color-sec: #d9534f;
+$color-th: #faa323;
+$color-fo: #cccccc;
+$color-fif: #05b3f4;
+$color-light: #fff;
+$color-dark: #000;
+
+$font-size: 16px;
+
+$font-fs: 'Roboto', sans-serif;
+
+
+@media screen and (max-width: 1200px) {
+  $font-size: 14px;
+}

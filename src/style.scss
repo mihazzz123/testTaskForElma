@@ -1,0 +1,87 @@
+#root {
+  display: flex;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: $color-fs transparent;
+  scrollbar-gutter: stable;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-fs;
+    border-radius: 15px;
+  }
+}
+
+body, html {
+  font-family: $font-fs;
+  font-size: $font-size;
+  line-height: 1.2;
+  color: $color-dark;
+}
+
+p, span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h1 {
+  display: block;
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+h2 {
+  display: block;
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+h3 {
+  display: block;
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+[draggable] {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 1200px) {
+  body, html {
+    font-size: $font-size / 1.1;
+  }
+}
+
+@media (max-width: 687px) {
+  body, html {
+    font-size: $font-size / 1.2;
+  }
+}

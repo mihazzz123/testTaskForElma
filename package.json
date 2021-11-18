@@ -1,0 +1,40 @@
+{
+  "name": "webpack_my_build_app_js",
+  "version": "1.0.0",
+  "description": "Сборка webpack 5 для разработки js приложений",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "html-loader": "^3.0.0",
+    "html-webpack-plugin": "^5.4.0",
+    "javascript-obfuscator": "^0.6.2",
+    "mini-css-extract-plugin": "^2.4.4",
+    "node-sass": "^6.0.1",
+    "postcss-loader": "^6.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.43.3",
+    "sass-loader": "^12.3.0",
+    "sass-resources-loader": "^2.2.4",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1",
+    "webpack-obfuscator": "^0.6.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.16.0",
+    "reset-css": "^5.0.1"
+  }
+}

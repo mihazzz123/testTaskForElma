@@ -1,0 +1,767 @@
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/reset-css/reset.css ***!
+  \************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+    display: none;
+}
+body {
+	line-height: 1;
+}
+menu, ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #5cb85c transparent;
+  scrollbar-gutter: stable;
+}
+*::-webkit-scrollbar {
+  width: 7px;
+}
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border-radius: 100px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #5cb85c;
+  border-radius: 15px;
+}
+
+body, html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
+}
+
+p, span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h1 {
+  display: block;
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+h2 {
+  display: block;
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+h3 {
+  display: block;
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+[draggable] {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 1200px) {
+  body, html {
+    font-size: 14.5454545455px;
+  }
+}
+@media (max-width: 687px) {
+  body, html {
+    font-size: 13.3333333333px;
+  }
+}
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/tasks/index.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+.userTask {
+  width: 100%;
+  min-height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  border: 1px solid #fff;
+  cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  position: relative;
+}
+.userTask.active {
+  background-color: #5cb85c;
+}
+.userTask.active .userTaskName {
+  color: #fff;
+}
+.userTask.hover {
+  z-index: 99;
+}
+.userTask.hover.active {
+  border-color: #45cf45;
+  background-color: #45cf45;
+}
+.userTask:hover {
+  z-index: 120;
+}
+
+.userTaskName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #000;
+  padding: 10px 5px;
+  word-wrap: anywhere;
+}
+
+.userTaskName:hover + .userTaskTooltip, .userTaskTooltip:hover {
+  z-index: 110;
+  opacity: 1;
+  visibility: visible;
+  cursor: default;
+}
+
+.userTaskTooltip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 250px;
+  padding: 16px;
+  background-color: #cccccc;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 10px #333333;
+          box-shadow: 0 5px 10px #333333;
+  z-index: -110;
+  opacity: 0;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.userTaskTooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: calc(50% - 5px);
+  border: 5px solid transparent;
+  border-bottom-color: #cccccc;
+}
+
+.userTaskTooltip__title {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.userTaskTooltip__param {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.userTaskTooltip__param span {
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.user:nth-last-child(1) .userTaskTooltip, .user:nth-last-child(2) .userTaskTooltip {
+  top: auto;
+  bottom: 80%;
+}
+.user:nth-last-child(1) .userTaskTooltip::before, .user:nth-last-child(2) .userTaskTooltip::before {
+  bottom: auto;
+  top: 100%;
+  border-bottom-color: transparent;
+  border-top-color: #cccccc;
+}
+
+@media (max-width: 992px) {
+  .user .userDay:last-child .userTaskTooltip {
+    left: auto;
+    right: 0%;
+    top: 80%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .user .userDay:last-child .userTaskTooltip::before {
+    left: auto;
+    right: 10%;
+  }
+
+  .user .userDay:nth-last-child(2) .userTaskTooltip {
+    left: 40%;
+  }
+  .user .userDay:nth-last-child(2) .userTaskTooltip::before {
+    left: calc(55% - 5px);
+  }
+}
+@media (max-width: 687px) {
+  .userTask {
+    min-height: 28px;
+  }
+
+  .userTaskName {
+    padding: 5px;
+  }
+}
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/backlogItem/index.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+.backlogItem {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: white;
+  cursor: move;
+  border: 3px solid transparent;
+}
+.backlogItem.ondragstart {
+  opacity: 1;
+  border: 3px dotted #05b3f4;
+}
+.backlogItem .backlogItemTitle {
+  display: block;
+  color: #048ec2;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.backlogItem .backlogItemDesc {
+  display: block;
+  margin-top: 1rem;
+  color: #000;
+  font-size: 1rem;
+}
+
+.tempDragItem {
+  pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+  .backlogItem {
+    padding: 0.4rem 0.7rem;
+  }
+  .backlogItem .backlogItemTitle {
+    font-size: 1.1rem;
+  }
+}
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/backlogList/index.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+.backlogList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 1rem;
+  overflow: auto;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/calendarDaysItem/index.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+.calendarDaysItem {
+  display: block;
+  width: calc((100% - 200px) / 7);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #000;
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+.calendarDaysItem:first-child {
+  margin-left: 100px;
+}
+.calendarDaysItem:last-child {
+  margin-right: 100px;
+}
+
+@media (max-width: 1200px) {
+  .calendarDaysItem {
+    width: calc((100% - 90px) / 7);
+  }
+  .calendarDaysItem:first-child {
+    margin-left: 90px;
+  }
+  .calendarDaysItem:last-child {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 687px) {
+  .calendarDaysItem {
+    width: calc((100% - 70px) / 7);
+    font-size: 0.8rem;
+    padding: 0.3rem;
+  }
+  .calendarDaysItem:first-child {
+    margin-left: 70px;
+  }
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/calendarDays/index.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+.calendarDays {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-top: 1rem;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/user/index.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  min-height: 120px;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+}
+.user.selectUser {
+  border-bottom: 3px solid #05b3f4;
+  border-top: 3px solid #05b3f4;
+}
+
+.userName {
+  width: 100px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.userDay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc((100% - 200px) / 7);
+}
+.userDay:last-child {
+  margin-right: 100px;
+}
+.userDay .dragoverItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  width: 100%;
+  min-height: 38px;
+  line-height: 1;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 10px 5px;
+  word-wrap: anywhere;
+  color: #fff;
+  background: rgba(92, 184, 92, 0.6);
+}
+
+@media (max-width: 1200px) {
+  .userName {
+    width: 90px;
+  }
+
+  .userDay {
+    width: calc((100% - 90px) / 7);
+  }
+  .userDay:last-child {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 687px) {
+  .user {
+    min-height: 100px;
+  }
+
+  .userName {
+    width: 70px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .userDay {
+    width: calc((100% - 70px) / 7);
+  }
+
+  .userTaskTooltip {
+    width: 130px;
+    padding: 0.6rem;
+  }
+
+  .userTaskTooltip__title {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .userTaskTooltip__param {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/users/index.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+.users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/search/index.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+.search {
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+  width: 100%;
+}
+.search .searchForm {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.search .searchForm label {
+  width: 100%;
+}
+.search .searchForm input {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #b3b3b3;
+  height: 40px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #fff;
+  color: #000;
+  outline: none;
+}
+.search .searchForm input:focus {
+  border: 1px solid #5cb85c;
+}
+.search .searchForm .searchBtn, .search .searchForm .clear {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+  right: 1px;
+  height: calc(100% - 2px);
+  width: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  background: none;
+}
+.search .searchForm .searchBtn {
+  border-radius: 0 5px 5px 0;
+  border: none;
+  border-left: 1px solid #b3b3b3;
+}
+.search .searchForm .searchBtn img {
+  display: block;
+  width: 55%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.search .searchForm .clear::before, .search .searchForm .clear::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.search .searchForm .clear::before {
+  -webkit-transform: rotate(45deg) translateX(80px);
+          transform: rotate(45deg) translateX(80px);
+}
+.search .searchForm .clear::after {
+  -webkit-transform: rotate(-45deg) translateX(80px);
+          transform: rotate(-45deg) translateX(80px);
+}
+.search .searchForm.focus .searchBtn {
+  z-index: 1;
+}
+.search .searchForm.focus .searchBtn img.iconSearch {
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+}
+.search .searchForm.focus .clear {
+  z-index: 10;
+}
+.search .searchForm.focus .clear::before {
+  -webkit-transform: rotate(45deg) translateX(0px);
+          transform: rotate(45deg) translateX(0px);
+}
+.search .searchForm.focus .clear::after {
+  -webkit-transform: rotate(-45deg) translateX(0px);
+          transform: rotate(-45deg) translateX(0px);
+}
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/backlog/index.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+.backlog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+  padding-top: 1rem;
+  background: #cccccc;
+  max-height: 100vh;
+  min-height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.backlog-title {
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .backlog {
+    width: 25%;
+  }
+}
+@media (max-width: 992px) {
+  .backlog {
+    display: none;
+  }
+}
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/btn/index.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+.btn {
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fs {
+  background-color: #5cb85c;
+  color: #fff;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/calendarBtn/index.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+.calendarBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[4].use[4]!./src/componets/calendar/index.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+.calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 90px;
+}
+.calendar .calendarTop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 90px;
+  width: 70%;
+  z-index: 80;
+  background: #fff;
+}
+
+@media (max-width: 1200px) {
+  .calendar {
+    width: 75%;
+  }
+  .calendar .calendarTop {
+    width: 75%;
+  }
+}
+@media (max-width: 992px) {
+  .calendar {
+    width: 100%;
+  }
+  .calendar .calendarTop {
+    width: 100%;
+  }
+}
+@media (max-width: 687px) {
+  .calendar {
+    margin-top: 68px;
+  }
+  .calendar .calendarTop {
+    height: 68px;
+  }
+}

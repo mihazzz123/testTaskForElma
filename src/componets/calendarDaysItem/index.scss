@@ -1,0 +1,43 @@
+.calendarDaysItem {
+  display: block;
+  width: calc((100% - 200px) / 7);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: $color-dark;
+  border: 1px solid $color-fo;
+  text-align: center;
+
+  &:first-child {
+    margin-left: 100px;
+  }
+
+  &:last-child {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .calendarDaysItem {
+    width: calc((100% - 90px) / 7);
+
+    &:first-child {
+      margin-left: 90px;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+@media (max-width: 687px) {
+  .calendarDaysItem {
+    width: calc((100% - 70px) / 7);
+    font-size: 0.8rem;
+    padding: 0.3rem;
+
+    &:first-child {
+      margin-left: 70px;
+    }
+  }
+}

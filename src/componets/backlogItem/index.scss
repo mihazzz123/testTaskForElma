@@ -1,0 +1,42 @@
+.backlogItem {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: lighten($color-fo, 50%);
+  cursor: move;
+  border: 3px solid transparent;
+
+  &.ondragstart {
+    opacity: 1;
+    border: 3px dotted $color-fif;
+  }
+
+  & .backlogItemTitle {
+    display: block;
+    color: darken($color-fif, 10%);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  & .backlogItemDesc {
+    display: block;
+    margin-top: 1rem;
+    color: $color-dark;
+    font-size: 1rem;
+  }
+}
+
+.tempDragItem {
+  pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+  .backlogItem {
+    padding: 0.4rem 0.7rem;
+
+    & .backlogItemTitle {
+      font-size: 1.1rem;
+    }
+  }
+}
